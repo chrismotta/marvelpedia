@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: red;
+    background-image: url(./img/background.jpg);
+}
+
+.container {
+    width: 500px;
+    min-height: 100vh;
+    background: white;
+    box-shadow: 0 0 30px black;
+    margin: 0px auto 0px auto;
+    padding-bottom: 20px;
+}
+
+.logo img {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.logo {
+    margin: auto;
+    width: 200px;
+}
+
+.search {
+    text-align: center;
+}
+
+.search input {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid grey;
+}
+.search button {
+    margin-left: 5px;
+    background: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid grey;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card {
+    margin: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.card .title {
+    padding: 20px;
+}
+
+.card .title .text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card .title .menu {
+    font-size: 20px;
+    float: right;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .description {
+    padding: 20px;
+}
+
+.card .media {
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.card .media .icon {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.comments-container {
+    padding: 20px;
+    padding-bottom: 10px;
+    border-top: 1px solid grey;
+    font-size: 14px;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+.comment .user {
+    font-weight: bold;
+}
