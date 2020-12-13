@@ -1,3 +1,7 @@
+// tarea
+// agrear al objeto characters realName y creationYear
+// agregarlo al maquetado
+
 const characters = [
   {
     name: "Spiderman",
