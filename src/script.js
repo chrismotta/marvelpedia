@@ -5,6 +5,20 @@ const characters = [
       "https://cnet2.cbsistatic.com/img/V2x0T36y6bka2yIn6rpVFDNHoRk=/center/top/2019/03/26/13d0a566-7355-4381-be24-dee281227504/spider-man-far-from-home-promo-image-1.jpg",
     info:
       "Spider-Man is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology comic book Amazing Fantasy #15 (Aug. 1962) in the Silver Age of Comic Books.",
+    comments: [
+      {
+        user: "Pali",
+        comment: "Muuy buena",
+      },
+      {
+        user: "Leon",
+        comment: "Muuy mala",
+      },
+      {
+        user: "Chris",
+        comment: "Muuy mas o menos",
+      },
+    ],
   },
   {
     name: "Captain Marvel",
@@ -12,12 +26,14 @@ const characters = [
       "https://dam.smashmexico.com.mx/wp-content/uploads/2019/05/marvel-captain-marvel-serie-regular-lanzamiento-marvel-fresh-start-cover-768x512.jpg",
     info:
       "Captain Marvel is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology comic book Amazing Fantasy #15 (Aug. 1962) in the Silver Age of Comic Books.",
+    comments: [],
   },
   {
     name: "Hulk",
     image: "https://i.blogs.es/2f9456/inmortal-hulk/450_1000.jpg",
     info:
       "Hulk is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology comic book Amazing Fantasy #15 (Aug. 1962) in the Silver Age of Comic Books.",
+    comments: [],
   },
 ];
 
@@ -29,6 +45,7 @@ const characters = [
 // card.classList.add("card");
 
 let cards = "";
+// cada personaje
 for (i = 0; i < characters.length; i++) {
   cards += `
     <div class="card">
@@ -38,31 +55,39 @@ for (i = 0; i < characters.length; i++) {
           <i class="fas fa-ellipsis-v"></i>
         </span>
       </div>
-      <div class="image">
-        <img
-          src="${characters[i].image}"
-          alt=""
-        />
-      </div>
-      <div class="media">
-        <span class="icon">
-          <i class="far fa-heart"></i>
-        </span>
-        <span class="icon">
-          <i class="far fa-comment"></i>
-        </span>
-      </div>
-      <div class="description">
-        ${characters[i].info}
-      </div>
-      <div class="comments-container">
-        <div class="comment">
-          <span class="user">Pali</span>
-          <span class="text">Muy bueno ese personaje!! Alta foto</span>
+      <div class="card-body">
+        <div class="image">
+          <img
+            src="${characters[i].image}"
+            alt=""
+          />
         </div>
-        <div class="comment">
-          <span class="user">Leon</span>
-          <span class="text">Yo prefiero a la capitana Marvel ;)</span>
+        <div class="card-info">
+          <div class="media">
+            <span class="icon">
+              <i class="far fa-heart"></i>
+            </span>
+            <span class="icon">
+              <i class="far fa-comment"></i>
+            </span>
+          </div>
+          <div class="description">
+            ${characters[i].info}
+          </div>
+          <div class="comments-container">`;
+  // cada comentario
+  const arrayComments = characters[i].comments;
+  for (g = 0; g < arrayComments.length; g++) {
+    cards += `
+            <div class="comment">
+              <span class="user">${arrayComments[g].user}</span>
+              <span class="text">${arrayComments[g].comment}</span>
+            </div>
+            `;
+  }
+
+  cards += `
+          </div>
         </div>
       </div>
     </div>

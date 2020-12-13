@@ -1,6 +1,9 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+body {
   background: red;
   background-image: url(./img/background.jpg);
 }
@@ -98,6 +101,22 @@ body {
 
 .comment .user {
   font-weight: bold;
+  color: darkblue;
+}
+.comment .user::before {
+  content: "@";
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  /* 
+  tarea:
+  hacer el grid de mitad y mitad
+  si te sale investigar grid-area
+  */
 }
 
 @media (min-width: 1024px) {
@@ -107,5 +126,33 @@ body {
 
   .container {
     width: 1024px;
+  }
+
+  .card-body {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .image {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    /* Con flex: */
+    /* width: 400px; */
+    /* Sin flex: */
+    /* display: inline-block; */
+    /* vertical-align: top; */
+  }
+
+  .card-info {
+    /* Con flex: */
+    /* width: 570px; */
+    /* Sin flex: */
+    /* display: inline-block; */
+    /* vertical-align: top; */
+  }
+
+  .card .media {
+    padding-top: 0px;
   }
 }
