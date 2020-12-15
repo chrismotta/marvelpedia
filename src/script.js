@@ -1,10 +1,15 @@
 // tarea
 // agrear al objeto characters realName y creationYear
 // agregarlo al maquetado
+// el lugar donde puse la fecha de creacion es muy provicional
+// no se por que el parentesis que use en el after aparece como con un espacio
+// pude hacerlo con grid area (esta buenisimo y facilita una banda las cosas) peero no pude tirar los comentarios abajo de la imagen y la /// descripcion
 
 const characters = [
   {
     name: "Spiderman",
+    realName: "Peter Parker",
+    creationYear: "1962",
     image:
       "https://cnet2.cbsistatic.com/img/V2x0T36y6bka2yIn6rpVFDNHoRk=/center/top/2019/03/26/13d0a566-7355-4381-be24-dee281227504/spider-man-far-from-home-promo-image-1.jpg",
     info:
@@ -16,7 +21,7 @@ const characters = [
       },
       {
         user: "Leon",
-        comment: "Muuy mala",
+        comment: "Me parece una excelente publicacion, sigan asi desarrolladores!",
       },
       {
         user: "Chris",
@@ -26,17 +31,21 @@ const characters = [
   },
   {
     name: "Captain Marvel",
+    realName: "Carol Danvers",
+    creationYear: "1986",
     image:
       "https://dam.smashmexico.com.mx/wp-content/uploads/2019/05/marvel-captain-marvel-serie-regular-lanzamiento-marvel-fresh-start-cover-768x512.jpg",
     info:
-      "Captain Marvel is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology comic book Amazing Fantasy #15 (Aug. 1962) in the Silver Age of Comic Books.",
+      "Captain Marvel is the name of several fictional superheroes appearing in American comic books published by Marvel Comics. Most of these versions exist in Marvel's main shared universe, known as the Marvel Universe.",
     comments: [],
   },
   {
     name: "Hulk",
+    realName:"Bruce Banner",
+    creationYear:"1962",
     image: "https://i.blogs.es/2f9456/inmortal-hulk/450_1000.jpg",
     info:
-      "Hulk is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology comic book Amazing Fantasy #15 (Aug. 1962) in the Silver Age of Comic Books.",
+      "In his comic book appearances, the character is both the Hulk, a green-skinned, hulking and muscular humanoid possessing a vast degree of physical strength, and his alter ego Dr. Robert Bruce Banner, a physically weak, socially withdrawn, and emotionally reserved physicist.",
     comments: [],
   },
 ];
@@ -54,7 +63,9 @@ for (i = 0; i < characters.length; i++) {
   cards += `
     <div class="card">
       <div class="title">
+      <div>Fecha de creación: ${characters[i].creationYear}</div>
         <span class="text">${characters[i].name}</span>
+        <span class="real-name">${characters[i].realName}<span>
         <span class="menu">
           <i class="fas fa-ellipsis-v"></i>
         </span>
@@ -84,7 +95,7 @@ for (i = 0; i < characters.length; i++) {
   for (g = 0; g < arrayComments.length; g++) {
     cards += `
             <div class="comment">
-              <span class="user">${arrayComments[g].user}</span>
+              <span class="user"><a href="">${arrayComments[g].user}</a></span>
               <span class="text">${arrayComments[g].comment}</span>
             </div>
             `;
