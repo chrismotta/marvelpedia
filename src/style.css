@@ -7,6 +7,13 @@ body {
   background: red;
   background-image: url(./img/background.jpg);
 }
+button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
 
 .container {
   width: 500px;
@@ -65,10 +72,10 @@ body {
   font-size: 20px;
 }
 
-.real-name::before{
+.real-name::before {
   content: "(";
 }
-.real-name::after{
+.real-name::after {
   content: ")";
 }
 
@@ -95,7 +102,6 @@ body {
   margin-right: 5px;
 }
 
-
 .comments-container {
   padding: 20px;
   padding-bottom: 10px;
@@ -112,7 +118,7 @@ body {
   color: darkblue;
 }
 
-.comment .user a{
+.comment .user a {
   text-decoration: none;
   color: #000000;
 }
@@ -127,28 +133,28 @@ body {
     width: 768px;
   }
 
-  .card-body{
+  .card-body {
     display: grid;
     /*grid-template-columns: 1fr 1fr;*/
-    grid-template-areas: 
-        "image media"
-        "image desciption"
-        "comments comments";
+    grid-template-areas:
+      "image media"
+      "image description"
+      "comments comments";
   }
 
-  .image{
+  .image {
     grid-area: image;
   }
 
-  .media{
+  .media {
     grid-area: media;
   }
 
-  .description{
+  .description {
     grid-area: description;
   }
 
-  .comments-container{
+  .comments-container {
     grid-area: comments;
   }
 
