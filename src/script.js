@@ -140,13 +140,19 @@ function like(characterID) {
   let characterIndex = likedCharacters.indexOf(characterID);
   if (characterIndex === -1) {
     likedCharacters.push(characterID);
+    renderContador();
   } else {
     likedCharacters.splice(characterIndex, 1);
+    renderContador();
   }
   console.log(likedCharacters);
   renderCharacters();
 }
 
+const puntoFlotante = document.querySelector(".flotante")
+function renderContador(){
+puntoFlotante.innerHTML = `${likedCharacters.length}`;
+}
 // suma de strings
 // let valor = "hola ";
 // valor += "Leon";
@@ -163,7 +169,6 @@ function like(characterID) {
 // }
 
 renderCharacters();
-
 // tarea
 // agregar contador de likes totales del usuario usando array.length
 // hacerlo con position fixed para que sea flotante
