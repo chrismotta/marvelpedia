@@ -24,7 +24,7 @@ button {
   padding-bottom: 20px;
 }
 
-.flotante{
+.flotante {
   width: 100px;
   height: 100px;
   background-color: rgba(0, 0, 255, 0.8);
@@ -32,14 +32,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  float: right;
-  position: sticky;
-  top: 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
   font-size: 20px;
   color: #fff;
 }
 
-.flotante::before{
+.flotante::before {
   content: "Likes: ";
 }
 
