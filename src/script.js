@@ -40,7 +40,7 @@ function renderCharacters() {
   // cardContainer.appendChild(card);
 }
 
-function like(characterID) {
+window.like = function (characterID) {
   // console.log("hay un like para el character", characterID);
 
   // si el id esta en la lista hay que sacarlo, sino agregarlo
@@ -56,7 +56,7 @@ function like(characterID) {
   }
   // console.log(likedCharacters);
   renderCharacters();
-}
+};
 
 const puntoFlotante = document.querySelector(".flotante");
 function renderContador() {
