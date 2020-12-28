@@ -40,6 +40,12 @@ function renderCharacters() {
   // cardContainer.appendChild(card);
 }
 
+// En el 'modo standard' las funciones nombradas van automaticamente
+// al scope global, entonces se las puede llamar de cualquier lado
+// function like(characterID) {
+
+// Al trabajar con module exports se activa el 'modo estricto',
+// entonces si queremos una funcion global debemos haceerlo explicito
 window.like = function (characterID) {
   // console.log("hay un like para el character", characterID);
 
