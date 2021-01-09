@@ -22,6 +22,10 @@ export const characters = [
         user: "Chris",
         comment: "Muuy mas o menos",
       },
+      {
+        user: "Chris",
+        comment: "Esta mejor Thor",
+      },
     ],
   },
   {

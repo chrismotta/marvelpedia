@@ -84,7 +84,3 @@ function renderContador() {
 // }
 
 renderCharacters();
-// tarea
-// agregar contador de likes totales del usuario usando array.length
-// hacerlo con position fixed para que sea flotante
-// convertirlo en una funcion render que se ejecute con cada cambio
