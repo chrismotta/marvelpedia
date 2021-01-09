@@ -185,10 +185,6 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .card .title .text {
-    color: red;
-  }
-
   .container {
     width: 1024px;
   }
@@ -209,13 +205,13 @@ button {
     /* vertical-align: top; */
   }
 
-  .card-info {
-    /* Con flex: */
-    /* width: 570px; */
-    /* Sin flex: */
-    /* display: inline-block; */
-    /* vertical-align: top; */
-  }
+  /*.card-info {
+     Con flex: 
+     width: 570px; 
+     Sin flex: 
+     display: inline-block; 
+     vertical-align: top; 
+  }*/
 
   .card .media {
     padding-top: 0px;
