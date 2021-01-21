@@ -1,5 +1,8 @@
 import Comment from "./Comment.js";
 import CardHeader from "./CardHeader.js";
+import Image from "./Image.js";
+import Media from "./Media.js";
+import Description from "./Description.js"
 
 // En el 'modo standard' las funciones nombradas van automaticamente
 // al scope global, entonces se las puede llamar de cualquier lado
@@ -32,24 +35,10 @@ export default function Card(caracter = {}, likedClass = "far fa-heart") {
     <div class="card">
       ${CardHeader(caracter)}
       <div class="card-body">
-        <div class="image">
-          <img
-            src="${caracter.image}"
-            alt=""
-          />
-        </div>
+        ${Image(caracter)}
         <div class="card-info">
-          <div class="media">
-            <button class="icon" onclick="like(${caracter._id})" >
-              <i class="${likedClass}"></i>
-            </button>
-            <button class="icon">
-              <i class="far fa-comment"></i>
-            </button>
-          </div>
-          <div class="description">
-            ${caracter.info}
-          </div>
+        ${Media(caracter, likedClass)}
+        ${Description(caracter)}
           <div class="comments-container">`;
 
   // cada comentario
@@ -67,4 +56,4 @@ export default function Card(caracter = {}, likedClass = "far fa-heart") {
   return content;
 }
 
-//TODO: pasar el comentario dentro del componente Comment, importarlo y renderizarlo
+

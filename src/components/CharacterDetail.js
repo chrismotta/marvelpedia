@@ -18,8 +18,20 @@ for (let i = 0; i < characters.length; i++) {
 }
 
 let characterDetail = `
-<h1>Nombre: ${character.name}</h1>
-<h1>Creacion: ${character.creationYear}</h1>
+<div>
+<h1 class="titulo">${character.name}</h1>
+</div>
+<div class="container-personaje">
+  <div class="imagen-personaje"><img src="${character.image}" alt"Imagen del personaje"></div>
+  <div>
+    <h1>Creacion: ${character.creationYear}</h1>
+    <h1 class="nombre-real-personaje">Nomre real: ${character.realName}</h1>
+    <div class="descripcion-personaje">${character.info}</div>
+  </div>
+</div>
+<div>
+  
+</div>
 `;
 
 //TODO: hacer maquetado usando el objeto obtenido del for

@@ -191,6 +191,29 @@ a:hover {
   */
 }
 
+/*PAGINA DE CADA PERSONAJE*/
+
+.titulo{
+  text-align: center;
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.container-personaje{
+  display: grid;
+  grid-template-columns: 7fr 4fr;
+}
+
+.imagen-personaje img{
+  width: 100%;
+  padding: 15px;
+}
+
+.nombre-real-personaje{
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 1024px) {
   .container {
     width: 1024px;
